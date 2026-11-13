@@ -107,6 +107,18 @@ async function loadPlans(){
  try {
   const response=await fetch(API_BASE+'/plans/terms');
   const config=await response.json();if(!response.ok||!Array.isArray(config.terms))throw Error('Worker ยังไม่ใช่รุ่นแผนดิจิทัล หรือเชื่อมต่อไม่ได้ กรุณา Deploy worker.js ก่อน');
+  $('progress').textContent='กำลังดึงนโยบายและแผนระดับชาติด้วยรหัสชุดข้อมูลโดยตรง…';
+  let required,requiredError;
+  for(let attempt=0;attempt<3;attempt++){
+   try{
+    const r=await fetch(API_BASE+'/plans/required',{signal:AbortSignal.timeout(30000)});
+    required=await r.json();
+    if(!r.ok||!Array.isArray(required.datasets)||!required.datasets.some(d=>d.id==='eb2e0e52-adc5-4f0c-aca1-96358b79ce32'))throw Error(required.detail||required.error||'Worker ยังไม่ใช่รุ่น v6 กรุณาอัปเดต Worker');
+    requiredError=null;break;
+   }catch(e){requiredError=e;if(attempt<2)await new Promise(r=>setTimeout(r,1000*(attempt+1)));}
+  }
+  if(requiredError)throw requiredError;
+  for(const d of required.datasets)found.set(d.id,d);
   for(let term=0;term<config.terms.length;term++){
    let start=0,pages=0;
    do{
@@ -117,12 +129,12 @@ async function loadPlans(){
      try{const res=await fetch(API_BASE+'/plans?term='+term+'&start='+start+'&refresh=1',{signal:AbortSignal.timeout(30000)});data=await res.json();if(!res.ok||!Array.isArray(data.datasets))throw Error(data.detail||data.error||'HTTP '+res.status);error=null;break;}catch(e){error=e;if(attempt<2)await new Promise(r=>setTimeout(r,1000*(attempt+1)));}
     }
     if(error)throw error;
-    for(const d of data.datasets)found.set(d.id,d);
+    for(const d of data.datasets)if(!found.has(d.id))found.set(d.id,d);
     if(data.nextStart!==null&&(!Number.isSafeInteger(data.nextStart)||data.nextStart<=start))throw Error('API ส่งตำแหน่งหน้าถัดไปไม่ถูกต้อง');
     start=data.nextStart;
    }while(start!==null);
   }
-  all=[...found.values()];agencyOptions();setMetrics();apply();status('ดึงสำเร็จ '+all.length+' ชุด','ok');$('progress').textContent='ค้นครบ '+config.terms.length+' คำ รวมซ้ำแล้ว '+all.length+' ชุดข้อมูล • '+new Date().toLocaleString('th-TH')+' • ยังรอตรวจเอกสาร';
+  all=[...found.values()];agencyOptions();setMetrics();apply();status('ดึงสำเร็จ '+all.length+' ชุด','ok');$('progress').textContent='ค้นครบ '+config.terms.length+' คำ และดึงแผนระดับชาติโดยตรง รวมซ้ำแล้ว '+all.length+' ชุดข้อมูล • '+new Date().toLocaleString('th-TH')+' • ยังรอตรวจเอกสาร';
  }catch(e){all=old;failures={plans:e.message};status('ดึงไม่สำเร็จ','error');$('progress').textContent='ดึงข้อมูลไม่ครบ: '+e.message+' — ยังไม่ใช้ผลที่ดึงมาได้บางส่วน หากมีผลเดิมจะคงไว้ กดปุ่มเพื่อลองใหม่';apply();}
  finally{$('refresh').disabled=false;}
 }
