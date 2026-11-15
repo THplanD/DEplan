@@ -461,6 +461,25 @@ body:has(#policyPlanPage.is-active) .topbar .policy-top-selector{display:flex}
 .menu a.bde-crosslink{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);border-left:0;gap:10px;font-size:13px;line-height:1.4;margin-top:4px}
 .menu a.bde-crosslink:hover{background:linear-gradient(90deg,#126dff,#2369e8)}
 .bde-cross-arrow{margin-left:auto;font-size:16px;opacity:.85}
+
+/* Added overview cards — preserve original dashboard and navigation */
+.bde-plan-extra{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px;align-items:stretch}
+.bde-extra-card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);min-width:0;overflow:hidden}
+.bde-extra-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.bde-extra-head h3{margin:0;font-size:16px;color:var(--text);font-weight:800;line-height:1.45}
+.bde-extra-tag{font-size:11px;white-space:nowrap;padding:6px 10px;border-radius:8px;background:#e9f2ff;color:#1459be;font-weight:700}
+.bde-extra-body{padding:10px 18px 16px}
+.bde-extra-row{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid #eaf0f8}
+.bde-extra-row:last-child{border-bottom:0}
+.bde-extra-info{min-width:0;flex:1}
+.bde-extra-info strong{font-size:13px;color:#193b70;font-weight:700;line-height:1.55;display:block}
+.bde-extra-info small{display:block;margin-top:4px;color:#7185a5;font-size:11px;line-height:1.5}
+.bde-extra-link{display:inline-flex;align-items:center;justify-content:center;border:1px solid #cfe0fc;border-radius:8px;background:#f3f8ff;color:#125dce;text-decoration:none;font-size:12px;font-weight:700;padding:9px 12px;white-space:nowrap;cursor:pointer;font-family:inherit}
+.bde-extra-link:hover{background:#e4efff}
+.bde-extra-pending{color:#8797ab;background:#f0f3f7;border-radius:8px;font-size:11px;padding:9px 11px;white-space:nowrap}
+@media(max-width:1000px){.bde-plan-extra{grid-template-columns:1fr}}
+@media(max-width:520px){.bde-extra-head{align-items:flex-start;flex-direction:column}.bde-extra-row{align-items:flex-start;flex-direction:column}.bde-extra-link,.bde-extra-pending{align-self:flex-start}}
+
 </style>
 <style>
 #wdcrDataCard[hidden],wcrDataCard[hidden],#egdiDataCard[hidden]{display:none!important}
@@ -610,6 +629,26 @@ body:has(#policyPlanPage.is-active) .topbar .policy-top-selector{display:flex}
 </div>
 </article>
 </section>
+
+<!-- Additional level 3 and level 2 plan cards on home dashboard -->
+<section class="bde-plan-extra" aria-label="สถานะนโยบายและแผนเพิ่มเติม">
+  <article class="bde-extra-card">
+    <div class="bde-extra-head"><h3>สถานะนโยบายและแผนอื่น ๆ ด้านดิจิทัล</h3><span class="bde-extra-tag">แผนระดับที่ 3</span></div>
+    <div class="bde-extra-body">
+      <div class="bde-extra-row"><div class="bde-extra-info"><strong>ร่างนโยบายและแผน DE ปี 2561</strong><small>พ.ศ. 2561–2580 · ฉบับเดิม</small></div><button type="button" class="bde-extra-link" onclick="document.getElementById('openPolicyPlanOriginal')?.click()">ดูรายละเอียด ↗</button></div>
+      <div class="bde-extra-row"><div class="bde-extra-info"><strong>ร่างนโยบายและแผน DE ปี 2565</strong><small>พ.ศ. 2565–2580 · ฉบับปรับปรุง ครั้งที่ 1</small></div><button type="button" class="bde-extra-link" onclick="document.getElementById('openPolicyPlanRevision1')?.click()">ดูรายละเอียด ↗</button></div>
+      <div class="bde-extra-row"><div class="bde-extra-info"><strong>ร่างนโยบายและแผน DE ปี 2569</strong><small>พ.ศ. 2569–2580 · ฉบับปรับปรุง ครั้งที่ 2</small></div><button type="button" class="bde-extra-link" onclick="document.getElementById('sidebarPolicyLink')?.click()">ดูรายละเอียด ↗</button></div>
+    </div>
+  </article>
+  <article class="bde-extra-card">
+    <div class="bde-extra-head"><h3>สถานะแผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ</h3><span class="bde-extra-tag">แผนระดับที่ 2</span></div>
+    <div class="bde-extra-body">
+      <div class="bde-extra-row"><div class="bde-extra-info"><strong>แผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ ฉบับที่ 13</strong><small>พ.ศ. 2566–2570 · ข้อมูล 13 หมุดหมาย</small></div><a class="bde-extra-link" href="https://thpland.github.io/nesdc-13thplan/" target="_blank" rel="noopener noreferrer">เปิด Dashboard ↗</a></div>
+      <div class="bde-extra-row"><div class="bde-extra-info"><strong>แผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ ฉบับที่ 14</strong><small>แผนระดับที่ 2</small></div><span class="bde-extra-pending">รอเชื่อมโยงข้อมูล</span></div>
+    </div>
+  </article>
+</section>
+
 </div>
 <!-- Global Index detail subpage -->
 <section class="gi-page" id="globalIndexPage">
