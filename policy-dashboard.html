@@ -480,6 +480,109 @@ body:has(#policyPlanPage.is-active) .topbar .policy-top-selector{display:flex}
 @media(max-width:1000px){.bde-plan-extra{grid-template-columns:1fr}}
 @media(max-width:520px){.bde-extra-head{align-items:flex-start;flex-direction:column}.bde-extra-row{align-items:flex-start;flex-direction:column}.bde-extra-link,.bde-extra-pending{align-self:flex-start}}
 
+
+/* Bottom plan panels are tabs; keep the rest of the original dashboard unchanged. */
+.bde-plan-tabs{display:block!important;margin-top:20px!important;gap:0!important}
+.bde-plan-tabs-head{background:#fff;border:1px solid #dbe5f2;border-radius:16px 16px 0 0;padding:19px 22px 0;display:flex;gap:20px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
+.bde-plan-tabs-head h2{font-size:18px;line-height:1.4;margin:0;color:#173665;font-weight:800}
+.bde-plan-tabs-head p{margin:5px 0 18px;color:#788ba8;font-size:12px}
+.bde-plan-tab-list{display:flex;gap:4px;align-self:flex-end;max-width:100%;overflow-x:auto}
+.bde-plan-tab{font:inherit;cursor:pointer;border:0;border-bottom:3px solid transparent;background:transparent;color:#667d9f;font-size:13px;font-weight:700;padding:12px 18px;white-space:nowrap;transition:color .15s,background .15s}
+.bde-plan-tab span{font-size:11px;font-weight:500;margin-left:5px;color:inherit;opacity:.85}
+.bde-plan-tab.active{border-bottom-color:#1964d9;color:#1355b7;background:#f2f6ff}
+.bde-plan-tab:hover{background:#f5f8fd;color:#1355b7}
+.bde-plan-tab:focus-visible{outline:2px solid #1964d9;outline-offset:-2px}
+.bde-plan-tab-content{background:white;border:1px solid #dbe5f2;border-top:0;border-radius:0 0 16px 16px;padding:16px 20px 20px}
+.bde-plan-tabs .bde-tab-panel{width:100%!important;max-width:none!important;margin:0!important;box-shadow:none!important;border:0!important;padding:0!important;min-height:0!important;display:block!important}
+.bde-plan-tabs .bde-tab-panel[hidden]{display:none!important}
+.bde-plan-tabs .bde-extra-head{margin-bottom:11px}
+@media(max-width:760px){.bde-plan-tabs-head{display:block;padding:17px 15px 0}.bde-plan-tab-list{width:100%}.bde-plan-tab{padding:12px 10px;font-size:12px;flex:1}.bde-plan-tab span{display:none}.bde-plan-tab-content{padding:12px}.bde-plan-tabs .bde-extra-row{flex-wrap:wrap}}
+
+/* Unified related plans: one card with two clearly separated groups */
+.bde-related-plans{margin-top:20px;background:#fff;border:1px solid #dbe5f2;border-radius:16px;box-shadow:0 10px 28px rgba(27,69,133,.06);overflow:hidden}
+.bde-related-heading{padding:21px 24px 18px;border-bottom:1px solid #e4ebf6}
+.bde-related-heading h2{font-size:18px;font-weight:800;line-height:1.55;color:#183665;margin:0;letter-spacing:0}
+.bde-related-heading p{margin:5px 0 0;font-size:12px;color:#7388a8}
+.bde-related-groups{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.bde-related-group{min-width:0;padding:19px 24px 23px}
+.bde-related-group+.bde-related-group{border-left:1px solid #e4ebf6}
+.bde-related-group-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}
+.bde-related-group-heading h3{font-size:14px;color:#203e71;font-weight:800;margin:0;line-height:1.6}
+.bde-related-group-heading span{background:#edf4ff;color:#1e5cc0;padding:6px 10px;border-radius:8px;white-space:nowrap;font-size:11px;font-weight:700}
+.bde-related-group .bde-extra-row{padding:12px 0;border-bottom:1px solid #edf1f7}
+.bde-related-group .bde-extra-row:last-child{border-bottom:0}
+@media(max-width:1050px){.bde-related-groups{grid-template-columns:1fr}.bde-related-group+.bde-related-group{border-left:0;border-top:1px solid #e4ebf6}}
+@media(max-width:650px){.bde-related-heading{padding:17px}.bde-related-heading h2{font-size:16px}.bde-related-group{padding:16px}.bde-related-group-heading{flex-wrap:wrap}.bde-related-group .bde-extra-row{flex-wrap:wrap;gap:10px}}
+
+
+/* BDE approved policy plans — blue-first UI, scoped to the new block */
+.bde-plan-directory{margin-top:20px;border-radius:17px}
+.bde-directory-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 26px}
+.bde-directory-header h2{font-size:18px;letter-spacing:0;line-height:1.55}
+.bde-dir-viewall{display:inline-flex;align-items:center;gap:5px;text-decoration:none;background:#edf4ff;border:1px solid #cfe0ff;color:#1455b5;border-radius:9px;padding:10px 14px;white-space:nowrap;font-size:12px;font-weight:700}
+.bde-dir-viewall:hover{background:#e1edff}
+.bde-dir-tools{display:flex;align-items:center;gap:12px;padding:16px 26px 4px}
+.bde-dir-search-label{font-size:12px;font-weight:700;color:#274677;white-space:nowrap}
+#bdeRelatedSearch{flex:1;max-width:440px;padding:11px 13px;border:1px solid #d8e4f6;border-radius:10px;background:#f9fbff;color:#183765;outline:none;font-size:13px}
+#bdeRelatedSearch:focus{border-color:#3a7be5;box-shadow:0 0 0 3px #e7f0ff}
+.bde-dir-count{margin-left:auto;color:#607da5;font-size:12px;font-weight:700}
+.bde-dir-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;padding:18px 26px 24px}
+.bde-dir-card{min-width:0;border:1px solid #dbe6f6;border-radius:13px;background:#fff;box-shadow:0 4px 16px rgba(18,61,122,.045);padding:17px 17px 15px;display:flex;flex-direction:column;gap:12px;transition:.18s}
+.bde-dir-card:hover{border-color:#a7c7f7;box-shadow:0 8px 24px rgba(20,77,157,.09);transform:translateY(-2px)}
+.bde-dir-card-head{display:flex;gap:11px;align-items:flex-start;min-height:64px}
+.bde-dir-seq{flex-shrink:0;display:grid;place-items:center;width:35px;height:35px;border-radius:10px;color:#fff;background:#1864c9;font-weight:800;font-size:16px}
+.bde-dir-name{color:#173866;font-weight:800;line-height:1.55;font-size:13px;overflow-wrap:anywhere;margin:0}
+.bde-dir-org{color:#6d82a1;font-size:11px;line-height:1.5;min-height:18px}
+.bde-dir-indicators{font-size:11px;color:#3d6091;background:#eef5ff;border-radius:7px;padding:7px 9px;display:inline-flex;align-self:flex-start;font-weight:700}
+.bde-dir-progress{display:grid;gap:8px;margin-top:2px}
+.bde-dir-prow{display:grid;gap:3px}
+.bde-dir-prow-top{display:flex;justify-content:space-between;font-size:11px;color:#556e95;gap:8px}
+.bde-dir-prow-top b{color:#174eac}
+.bde-dir-track{height:6px;border-radius:99px;background:#e8eef8;overflow:hidden}
+.bde-dir-fill{display:block;height:100%;border-radius:99px;background:#2563d5}
+.bde-dir-fill.mid{background:#669af0}.bde-dir-fill.low{background:#a6c4ee}
+.bde-dir-open{display:flex;justify-content:flex-end;margin-top:auto;padding-top:4px}
+.bde-dir-open a{display:inline-flex;align-items:center;text-decoration:none;color:#fff;background:#145bc6;border-radius:8px;padding:9px 13px;font-size:11px;font-weight:800}
+.bde-dir-open a:hover{background:#0a459e}
+.bde-dir-empty{grid-column:1/-1;padding:22px;background:#f6f9ff;border:1px dashed #ccdcef;border-radius:12px;color:#5d769c;font-size:13px;line-height:1.7}
+.bde-dir-empty a{color:#145bc6;font-weight:700}
+.bde-dir-other{border-top:1px solid #e2eaf6;padding:18px 26px 24px;background:#fbfcff}
+.bde-dir-other-title{display:flex;align-items:center;gap:10px;color:#1b3b70;font-size:13px;font-weight:800;margin-bottom:12px}
+.bde-dir-other-title span{font-size:10px;color:#245eaf;border-radius:6px;padding:5px 8px;background:#e8f1ff}
+.bde-dir-other-rows{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bde-dir-other-rows>div{border:1px solid #dce7f8;padding:14px;border-radius:11px;background:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.bde-dir-other-rows strong{font-size:12px;color:#1d416e}
+.bde-dir-other-rows small{font-size:11px;color:#7287a8}
+.bde-dir-other-rows a,.bde-dir-wait{margin-left:auto;text-decoration:none;padding:7px 10px;border-radius:8px;font-weight:700;font-size:11px;background:#e8f1ff;color:#1455b2;white-space:nowrap}
+.bde-dir-wait{background:#f0f3f9;color:#8da0b9}
+@media(max-width:1190px){.bde-dir-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.bde-dir-grid,.bde-dir-other-rows{grid-template-columns:1fr}.bde-directory-header{align-items:flex-start;flex-direction:column}.bde-dir-tools{flex-wrap:wrap}.bde-dir-count{margin-left:0}.bde-directory-header,.bde-dir-tools,.bde-dir-grid,.bde-dir-other{padding-left:16px;padding-right:16px}}
+
+
+/* Two-column related plans layout: independent compact horizontal carousel and NESDC section */
+.bde-plan-directory .bde-split-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;align-items:stretch}
+.bde-plan-directory .bde-split-pane{min-width:0;padding:17px 17px 19px}
+.bde-plan-directory .bde-split-pane+.bde-split-pane{border-left:1px solid #e3ebf8}
+.bde-plan-directory .bde-split-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 0 10px}
+.bde-plan-directory .bde-split-head h3{font-size:14px;font-weight:800;color:#173967;line-height:1.5;margin:0}
+.bde-plan-directory .bde-split-label{background:#e9f2ff;color:#205eb9;font-size:10px;font-weight:800;padding:6px 9px;border-radius:7px;white-space:nowrap}
+.bde-plan-directory .bde-compact-tools{padding:0 0 8px}
+.bde-plan-directory .bde-dir-grid{padding:0 0 8px;gap:10px}
+.bde-plan-directory .bde-dir-card{flex:0 0 min(86%,340px);max-width:340px;min-height:151px}
+.bde-plan-directory .bde-dir-other{border:0;background:transparent;padding:0}
+.bde-plan-directory .bde-dir-other-title{min-height:33px;margin-bottom:21px;justify-content:space-between}
+.bde-plan-directory .bde-dir-other-rows{display:grid;grid-template-columns:1fr;gap:10px}
+.bde-plan-directory .bde-dir-other-rows>div{min-height:83px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:10px;row-gap:3px}
+.bde-plan-directory .bde-dir-other-rows strong{grid-column:1;font-size:13px}
+.bde-plan-directory .bde-dir-other-rows small{grid-column:1;font-size:11px}
+.bde-plan-directory .bde-dir-other-rows a,.bde-plan-directory .bde-dir-other-rows .bde-dir-wait{grid-column:2;grid-row:1 / span 2;margin-left:0}
+@media(max-width:1040px){.bde-plan-directory .bde-split-grid{grid-template-columns:1fr}.bde-plan-directory .bde-split-pane+.bde-split-pane{border-left:0;border-top:1px solid #e3ebf8}}
+@media(max-width:580px){.bde-plan-directory .bde-split-pane{padding:15px}.bde-plan-directory .bde-dir-card{flex-basis:270px}.bde-plan-directory .bde-dir-other-rows>div{grid-template-columns:1fr}.bde-plan-directory .bde-dir-other-rows a,.bde-plan-directory .bde-dir-other-rows .bde-dir-wait{grid-column:1;grid-row:auto;justify-self:start}}
+
+/* Keep the all-plans action beside the Level 3 tag, rather than in the section header. */
+.bde-plan-directory .bde-split-head-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.bde-plan-directory .bde-split-head-actions .bde-dir-viewall{font-size:11px;padding:7px 10px;line-height:1.35}
+@media(max-width:600px){.bde-plan-directory .bde-split-head{align-items:flex-start;flex-wrap:wrap}.bde-plan-directory .bde-split-head-actions{margin-left:auto}}
 </style>
 <style>
 #wdcrDataCard[hidden],wcrDataCard[hidden],#egdiDataCard[hidden]{display:none!important}
@@ -506,6 +609,28 @@ body:has(#policyPlanPage.is-active) .topbar .policy-top-selector{display:flex}
 #wdcrSourceTable tbody tr.wdcr-detail > td:first-child{padding-left:38px!important;color:#35527b}
 #wdcrSourceTable tbody tr.wdcr-detail > td{background:#fff}
 
+</style>
+<style id="bde-compact-carousel-styles">
+/* Compact, single-row horizontally scrollable plans, keeping original site styles intact. */
+.bde-plan-directory .bde-directory-header{border-bottom:1px solid #e7edf8;padding-bottom:17px}
+.bde-plan-directory .bde-directory-header p{display:none}
+.bde-compact-tools{padding:12px 25px 0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bde-compact-hint{font-size:12px;color:#7185a7;font-weight:500}
+.bde-scroll-controls{display:flex;gap:7px}
+.bde-scroll-arrow{width:33px;height:33px;border-radius:9px;border:1px solid #d5e2f6;background:#fff;color:#1b59bd;font-size:17px;font-weight:700;display:grid;place-items:center;cursor:pointer}
+.bde-scroll-arrow:hover{background:#eaf2ff;border-color:#9fc2f5}
+.bde-plan-directory .bde-dir-grid{display:flex;overflow-x:auto;overflow-y:hidden;gap:12px;padding:14px 26px 22px;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#c1d4f0 transparent;align-items:stretch}
+.bde-plan-directory .bde-dir-card{flex:0 0 clamp(258px,29%,345px);min-height:151px;max-width:345px;padding:17px 18px;scroll-snap-align:start;gap:10px;box-shadow:none;border-radius:13px}
+.bde-plan-directory .bde-dir-card:hover{transform:none;box-shadow:0 6px 17px rgba(25,73,150,.07)}
+.bde-plan-directory .bde-dir-card-head{min-height:0;gap:10px;align-items:flex-start}
+.bde-plan-directory .bde-dir-seq{width:29px;height:29px;border-radius:8px;font-size:12px}
+.bde-plan-directory .bde-dir-name{font-size:13px;line-height:1.55;font-weight:700;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;min-height:40px}
+.bde-plan-directory .bde-dir-card-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:9px;padding-top:7px}
+.bde-plan-directory .bde-dir-indicators{font-size:11px;padding:7px 9px;background:#eff5ff;white-space:nowrap;margin:0}
+.bde-plan-directory .bde-dir-open{padding:0;margin:0;flex-shrink:0}
+.bde-plan-directory .bde-dir-open a{padding:8px 10px;background:#1660c5;font-size:11px;border-radius:8px}
+.bde-plan-directory .bde-dir-empty{flex:1 0 100%}
+@media(max-width:780px){.bde-plan-directory .bde-dir-grid{display:flex;overflow-x:auto;padding-left:16px;padding-right:16px}.bde-plan-directory .bde-dir-card{flex-basis:270px}.bde-compact-tools{padding-left:16px;padding-right:16px}.bde-plan-directory .bde-directory-header{flex-direction:row;align-items:center;flex-wrap:wrap}}
 </style>
 </head>
 <body>
@@ -630,26 +755,28 @@ body:has(#policyPlanPage.is-active) .topbar .policy-top-selector{display:flex}
 </article>
 </section>
 
-<!-- Additional level 3 and level 2 plan cards on home dashboard -->
-<section class="bde-plan-extra" aria-label="สถานะนโยบายและแผนเพิ่มเติม">
-  <article class="bde-extra-card">
-    <div class="bde-extra-head"><h3>สถานะนโยบายและแผนอื่น ๆ ด้านดิจิทัล</h3><span class="bde-extra-tag">แผนระดับที่ 3</span></div>
-    <div class="bde-extra-body">
-      <div class="bde-extra-row"><div class="bde-extra-info"><strong>ร่างนโยบายและแผน DE ปี 2561</strong><small>พ.ศ. 2561–2580 · ฉบับเดิม</small></div><button type="button" class="bde-extra-link" onclick="document.getElementById('openPolicyPlanOriginal')?.click()">ดูรายละเอียด ↗</button></div>
-      <div class="bde-extra-row"><div class="bde-extra-info"><strong>ร่างนโยบายและแผน DE ปี 2565</strong><small>พ.ศ. 2565–2580 · ฉบับปรับปรุง ครั้งที่ 1</small></div><button type="button" class="bde-extra-link" onclick="document.getElementById('openPolicyPlanRevision1')?.click()">ดูรายละเอียด ↗</button></div>
-      <div class="bde-extra-row"><div class="bde-extra-info"><strong>ร่างนโยบายและแผน DE ปี 2569</strong><small>พ.ศ. 2569–2580 · ฉบับปรับปรุง ครั้งที่ 2</small></div><button type="button" class="bde-extra-link" onclick="document.getElementById('sidebarPolicyLink')?.click()">ดูรายละเอียด ↗</button></div>
+<!-- Unified BDE policy plans catalogue (same approved dataset as plan-status.html) -->
+<section class="bde-related-plans bde-plan-directory" aria-label="สถานะนโยบายและแผนที่เกี่ยวข้องกับการพัฒนาดิจิทัลเพื่อเศรษฐกิจและสังคม">
+ <header class="bde-related-heading bde-directory-header">
+   <div><h2>สถานะนโยบายและแผนที่เกี่ยวข้องกับการพัฒนาดิจิทัลเพื่อเศรษฐกิจและสังคม</h2><p>รายการแผนที่ได้รับอนุมัติในระบบ พร้อมเชื่อมโยงหน้ารายละเอียด</p></div>
+ </header>
+ <div class="bde-split-grid">
+  <div class="bde-split-pane bde-split-digital">
+   <div class="bde-split-head"><h3>นโยบายและแผนด้านดิจิทัล</h3><div class="bde-split-head-actions"><a href="plan-status.html" class="bde-dir-viewall">ดูรายการทั้งหมด <span aria-hidden="true">↗</span></a><span class="bde-split-label">แผนระดับที่ 3</span></div></div>
+   <div class="bde-compact-tools"><span class="bde-compact-hint">เลื่อนเพื่อดูรายการแผนทั้งหมด</span><div class="bde-scroll-controls"><button type="button" class="bde-scroll-arrow" id="bdeScrollPrev" aria-label="เลื่อนไปแผนก่อนหน้า">&#8592;</button><button type="button" class="bde-scroll-arrow" id="bdeScrollNext" aria-label="เลื่อนไปแผนถัดไป">&#8594;</button></div></div>
+   <div class="bde-dir-grid" id="bdeRelatedPlanGrid" aria-live="polite"></div>
+  </div>
+  <div class="bde-split-pane bde-split-national">
+   <div class="bde-dir-other">
+    <div class="bde-dir-other-title">แผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ <span>แผนระดับที่ 2</span></div>
+    <div class="bde-dir-other-rows">
+     <div><strong>แผนพัฒนาฯ ฉบับที่ 13</strong><small>พ.ศ. 2566–2570 · 13 หมุดหมาย</small><a href="https://thpland.github.io/nesdc-13thplan/" target="_blank" rel="noopener noreferrer">ดูรายละเอียด ↗</a></div>
+     <div><strong>แผนพัฒนาฯ ฉบับที่ 14</strong><small>ยังไม่มีปลายทางที่ยืนยันแล้ว</small><span class="bde-dir-wait">รอเชื่อมโยง</span></div>
     </div>
-  </article>
-  <article class="bde-extra-card">
-    <div class="bde-extra-head"><h3>สถานะแผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ</h3><span class="bde-extra-tag">แผนระดับที่ 2</span></div>
-    <div class="bde-extra-body">
-      <div class="bde-extra-row"><div class="bde-extra-info"><strong>แผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ ฉบับที่ 13</strong><small>พ.ศ. 2566–2570 · ข้อมูล 13 หมุดหมาย</small></div><a class="bde-extra-link" href="https://thpland.github.io/nesdc-13thplan/" target="_blank" rel="noopener noreferrer">เปิด Dashboard ↗</a></div>
-      <div class="bde-extra-row"><div class="bde-extra-info"><strong>แผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ ฉบับที่ 14</strong><small>แผนระดับที่ 2</small></div><span class="bde-extra-pending">รอเชื่อมโยงข้อมูล</span></div>
-    </div>
-  </article>
+   </div>
+  </div>
+ </div>
 </section>
-
-</div>
 <!-- Global Index detail subpage -->
 <section class="gi-page" id="globalIndexPage">
 <div class="gi-breadcrumb"><button class="gi-back" id="giBack">หน้าหลัก</button><span>›</span><span>Global Index ภาพรวม</span><span>›</span><b>รายละเอียด</b></div>
@@ -2474,6 +2601,59 @@ filters();apply();renderHomeProjectCard(projects);tryLive();
 document.getElementById('returnHomeTop')?.addEventListener('click', function(){
   document.getElementById('sidebarHomeLink')?.click();
 });
+</script>
+<script>
+(function(){
+  const tabs=[...document.querySelectorAll('.bde-plan-tab')];
+  const panels=[...document.querySelectorAll('.bde-tab-panel')];
+  function selectTab(index){
+    tabs.forEach((t,i)=>{const active=i===index;t.classList.toggle('active',active);t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;panels[i].hidden=!active;});
+  }
+  tabs.forEach((t,i)=>{t.addEventListener('click',()=>selectTab(i));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();let next=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;selectTab(next);tabs[next].focus();}})});
+})();
+</script>
+<script>
+/* Matches the approved dataset used by plan-status.html on the same GitHub Pages origin. */
+(function(){
+ const grid=document.getElementById('bdeRelatedPlanGrid');
+ const input=document.getElementById('bdeRelatedSearch');
+ const count=document.getElementById('bdeRelatedCount');
+ if(!grid)return;
+ const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function records(){try {let rows=JSON.parse(localStorage.getItem('bdeApprovedSubmissions')||'[]');return Array.isArray(rows)?rows:[]}catch(e){return []}}
+ function stat(item){
+  const summary=item.summary||{};
+  const ind=(Array.isArray(item.strategies)?item.strategies:[]).flatMap(s=>Array.isArray(s.indicators)?s.indicators:[]).filter(Boolean);
+  const measured=ind.filter(x=>{
+   const value=String(x.value??x.currentValue??x.current_value??'').trim();
+   const p=Number(String(x.progressValue??'').replace(/[^0-9.\-]/g,''));
+   return value!=='' && String(x.progressValue??'').trim()!=='' && Number.isFinite(p)
+  });
+  if(ind.length){let done=0,near=0,low=0;measured.forEach(i=>{let p=Number(String(i.progressValue).replace(/[^0-9.\-]/g,''));if(p>=100)done++;else if(p>=80)near++;else low++});const total=measured.length;return {total,missing:ind.length-total,values:[done,near,low].map(v=>total?Math.round(v/total*100):0)}}
+  const done=Number(summary.completed??summary.success??summary.done??0)||0,near=Number(summary.onPlan??summary.progress??0)||0,low=Number(summary.below??summary.pending??0)||0;
+  const total=Number(summary.total??summary.indicatorsTotal??summary.totalIndicators??done+near+low)||0;
+  return {total,missing:0,values:[done,near,low].map(v=>total?Math.round(v/total*100):0)};
+ }
+ function render(){
+   let all=records();
+   const rows=all;
+   if(count) count.textContent=`${rows.length} รายการ`;
+   if(!rows.length){grid.innerHTML=`<div class="bde-dir-empty">ยังไม่มีรายการแผนที่อนุมัติในข้อมูลที่เบราว์เซอร์นี้เข้าถึงได้ — <a href="plan-status.html">เปิดดูรายการแผนทั้งหมด ↗</a></div>`;return}
+   grid.innerHTML=rows.map((x,i)=>{
+     const indicators=(Array.isArray(x.strategies)?x.strategies:[]).flatMap(y=>Array.isArray(y.indicators)?y.indicators:[]).filter(Boolean);
+     const total=indicators.length || Number(x.summary?.total??x.summary?.indicatorsTotal??x.summary?.totalIndicators??stat(x).total) || 0;
+     const name=x.planInfo?.planName||'รายการแผน';
+     return `<article class="bde-dir-card"><div class="bde-dir-card-head"><span class="bde-dir-seq">${String(i+1).padStart(2,'0')}</span><h3 class="bde-dir-name" title="${escape(name)}">${escape(name)}</h3></div><div class="bde-dir-card-foot"><span class="bde-dir-indicators">${total} ตัวชี้วัด</span><div class="bde-dir-open"><a href="plan-status.html" data-related-id="${escape(x.id)}">ดูรายละเอียด ↗</a></div></div></article>`;
+   }).join('');
+   grid.querySelectorAll('[data-related-id]').forEach(a=>a.addEventListener('click',()=>{try{localStorage.setItem('bdeActiveApprovedSubmissionId',a.getAttribute('data-related-id'))}catch(e){}}));
+ }
+ document.getElementById('bdeScrollPrev')?.addEventListener('click',()=>grid.scrollBy({left:-355,behavior:'smooth'}));
+ document.getElementById('bdeScrollNext')?.addEventListener('click',()=>grid.scrollBy({left:355,behavior:'smooth'}));
+ input?.addEventListener('input',render);
+ window.addEventListener('storage',e=>{if(e.key==='bdeApprovedSubmissions')render()});
+ render();
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)render()});
+})();
 </script>
 </body>
 </html>
