@@ -1,0 +1,310 @@
+﻿<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PDPC | ติดตามตัวชี้วัดแผนปฏิบัติการ</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#12387a;--main:#193f8a;--blue:#3379e2;--gold:#c49533;--aqua:#56c9c6;--paper:#fff;--bg:#f5f6fa;--line:#d9dff4;--text:#182f7e;--small:#5365ba;--positive:#13975b;--orange:#e99416}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:'Noto Sans Thai',Tahoma,sans-serif;font-size:13px}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid #459ddb;outline-offset:2px}.layout{display:flex;min-height:100vh;border-top:6px solid #193e8c}.sidebar{width:206px;flex:none;background:#fff;border-right:1px solid #dbe1f5;position:sticky;top:0;height:calc(100vh - 6px);display:flex;flex-direction:column}.sidehead{padding:20px 6px 16px;font-weight:800;font-size:15px;line-height:1.5;color:#162d92}.sidenav{flex:1;overflow-y:auto;scrollbar-width:thin}.navitem{padding:12px 10px 13px;text-align:left;background:transparent;border:0;width:calc(100% - 20px);margin:0 10px 4px 0;border-radius:0 8px 8px 0;color:var(--text);display:block;min-height:70px}.navitem strong{display:block;font-size:12px;font-weight:800}.navitem small{display:block;font-size:11px;font-weight:400;line-height:1.45;color:#2944ad}.navitem.active{background:#e7eaf8}.navitem:hover{background:#f0f2fc}.sidefoot{border-top:1px solid var(--line);padding:10px 8px;color:#7280a7;font-size:10px}.main{flex:1;min-width:0}.topbar{background:#fff;min-height:84px;display:flex;align-items:flex-start;padding:15px 22px 12px;gap:17px;border-bottom:2px solid #e7e9ef;box-shadow:0 2px 3px #18265708}.iconbtn{font-size:20px;color:var(--text);background:none;border:0;padding:5px 0;line-height:1}.top-info{flex:1;min-width:0}.title-row{display:flex;align-items:center;gap:11px}.headline{font-size:27px;font-weight:800;line-height:1.26;color:#172e91;margin:0}.docs{width:31px;height:32px;display:grid;place-items:center;border-radius:5px;color:white;background:#4c5b79;font-size:20px;border:0}.subtitle{font-size:13px;color:#5365ba;margin-top:0}.top-actions{display:flex;gap:7px;align-items:center;padding-top:6px}.top-actions select,.top-actions input{background:#fff;border:1px solid var(--line);border-radius:7px;padding:7px;color:var(--text);max-width:142px;font-size:11px}.top-actions input{width:130px}.body{padding:24px 26px 45px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{border:1px solid #d7ddf2;border-radius:12px;background:white;min-height:460px;padding:20px 20px 18px;display:flex;flex-direction:column;overflow:hidden}.card-header{font-size:13px;line-height:1.55;font-weight:800;color:#122d8d;min-height:42px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.cardmeta{display:flex;align-items:start;gap:5px;font-size:10.8px;line-height:1.6;margin-top:13px;color:#566bc0}.cardmeta .caption{color:#e79510;font-weight:700;flex:none}.cardmeta.cyan{margin-top:0}.cardmeta.cyan .caption{color:#03b5c5}.cardmeta .content-text{flex:1;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}.cardstatus{display:inline-flex;border-radius:100px;border:1px solid #44c3b8;color:#008e90;background:#e9fbf9;padding:1px 7px;font-size:9px;font-weight:700;margin-left:8px;white-space:nowrap}.card-value-row{display:flex;align-items:center;justify-content:center;position:relative;margin-top:23px;min-height:77px}.value{font-size:36px;letter-spacing:-1.7px;color:#193490;font-weight:800;line-height:1.1;text-align:center}.value .suffix{font-size:13px;margin-left:7px;letter-spacing:0;font-weight:700}.value-date{font-size:11px;text-align:center;color:#7783c9;margin-top:5px}.change{position:absolute;right:0;top:9px;color:#069754;font-size:11px;font-weight:800;line-height:1.2;text-align:right;white-space:nowrap}.change.down{color:#df5a47}.change .tiny{color:#6f7ac2;font-size:9px;font-weight:400}.viz{width:100%;margin-top:16px;flex:1;display:flex;align-items:center;justify-content:center;min-height:190px}.viz svg{width:100%;height:195px;overflow:visible}.accordion{border:1px solid var(--line);border-radius:8px;background:#f8f9fe;color:#1c3594;min-height:31px;display:flex;align-items:center;justify-content:space-between;text-align:left;padding:7px 10px;font-size:10.5px;font-weight:800;width:100%;margin-top:12px}.accordion:hover{background:#eef2ff}.card-expand{border:1px solid var(--line);border-radius:7px;padding:9px;margin-top:5px;background:#fff}.card-expand table{border-collapse:collapse;width:100%;font-size:11px}.card-expand td,.card-expand th{padding:5px;border-bottom:1px solid #e8ebf8;text-align:left}.footer{padding:15px 12px;font-size:9px;text-align:center;color:#7f8ac3;border-top:1px solid #dfe4f6;background:#fff}.overlay{display:none;position:fixed;inset:0;background:#0b17436e;z-index:80;align-items:center;justify-content:center;padding:18px}.overlay.active{display:flex}.modal{width:min(1010px,97vw);max-height:94vh;overflow-y:auto;background:#fff;border-radius:15px;box-shadow:0 20px 70px #14214a3a}.modalhead{padding:15px 14px 20px 9px;position:relative;border-bottom:1px solid #dce1f5;background:linear-gradient(105deg,#f1f2fd,#fff)}.modal-kicker{font-size:11px;font-weight:700;color:#1e39a4}.modal-title{font-size:24px;font-weight:800;color:#182e93;line-height:1.28;margin:4px 50px 0 0}.modal-sub{font-size:11px;color:#5869bb;margin-top:5px}.xbtn{position:absolute;right:14px;top:13px;width:36px;height:36px;border-radius:100%;border:1px solid #d6dcf5;background:white;color:#213ca6;font-size:23px}.modbody{padding:16px 10px 15px}.statrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.stat{border:1px solid #cfd8f2;border-top:2px solid #61718f;border-radius:9px;padding:12px;min-height:77px}.stat label{display:block;color:#5768bd;font-size:10px;font-weight:700}.stat b{display:block;color:#1b3492;font-size:13px;margin-top:4px}.stat small{display:block;font-size:9px;color:#6c7bc2}.panels{display:grid;grid-template-columns:2fr 1fr;gap:10px;margin-top:14px}.panel{border:1px solid #d5dcf7;border-radius:11px;padding:15px;min-width:0}.panelheading{display:flex;justify-content:space-between;font-size:13px;font-weight:800;color:#1d3492;margin-bottom:12px}.panels svg{width:100%;height:285px}.datatable{height:260px;overflow:auto}.datatable table{border-collapse:collapse;width:100%;font-size:12px}.datatable th,.datatable td{padding:11px 5px;border-bottom:1px solid #dfe4f5;text-align:left}.datatable td:last-child{text-align:right;color:#334cb2}.datatable th{position:sticky;top:0;background:white;color:#5566b4}.policy{margin-top:16px;border:1px solid #d5dcf7;border-radius:10px;padding:14px;font-size:11px;color:#3047a2}.policy strong{color:#1d3599}.modfoot{display:flex;justify-content:space-between;align-items:center;padding:7px 10px 13px;gap:15px}.source{font-size:10px;color:#3049b2}.modbuttons{display:flex;gap:7px}.modbuttons button{border:1px solid #d2d9f4;border-radius:8px;background:white;padding:9px 15px;color:#1c339d;font-size:11px;font-weight:800}.modbuttons button.primary{background:#17348f;color:white;border-color:#17348f}.badgewarn{font-size:10px;color:#8c6926}.empty{grid-column:1/-1;padding:50px;text-align:center;color:#7c8dc1}@media(max-width:1300px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.top-actions input{display:none}}@media(max-width:800px){.sidebar{position:fixed;z-index:40;transform:translateX(-100%);transition:transform .2s}.sidebar.open{transform:translateX(0)}.cards{grid-template-columns:1fr}.body{padding:12px}.topbar{padding:12px}.headline{font-size:21px}.top-actions{display:none}.panels{grid-template-columns:1fr}.statrow{grid-template-columns:1fr}.modal-title{font-size:18px}}
+
+
+/* PDPC identity treatment — retains NESDC dashboard layout */
+:root{--deep:#0d315e;--main:#12477e;--blue:#246cba;--gold:#bd923d;--aqua:#2aa9ae;--bg:#f6f8fc;--line:#dce5ef;--text:#173c6b;--small:#5b7191;--positive:#159365;--orange:#c48b2b}
+html,body{background:#f6f8fc;color:#173c6b}
+.layout{border-top-color:#123c70}
+.sidebar{border-right-color:#e3e8f0}
+.sidehead{color:#103e73;font-size:15px;padding:19px 10px 19px;letter-spacing:-.25px}
+.navitem{color:#143b6c;border-radius:0 9px 9px 0;transition:background .15s}
+.navitem strong{color:#123a6b}
+.navitem small{color:#4b668a}
+.navitem.active{background:#e9f0f8;border-left:3px solid #bd923d;padding-left:7px}
+.navitem:hover{background:#eff4fa}
+.sidefoot{color:#71829b}
+.topbar{border-bottom-color:#e3eaf1;box-shadow:0 2px 8px #123c7010}
+.headline,.modal-title{color:#113e77}
+.subtitle,.modal-sub{color:#657c9b}
+.docs{background:#23466e}
+.top-actions input,.top-actions select{border-color:#dae3ec;color:#173c6b}
+.body{padding:24px 26px 48px}
+.cards{gap:20px}
+.card{border:1px solid #dce5ef;border-radius:12px;box-shadow:0 3px 14px #173e6508;background:#fff;min-height:465px;padding:20px 20px 18px}
+.card-header{color:#133d71;font-size:13px;line-height:1.6;min-height:43px;letter-spacing:-.08px}
+.cardmeta{color:#617897;margin-top:12px;line-height:1.6}
+.cardmeta .caption{color:#bf8b25}
+.cardmeta.cyan .caption{color:#149ca8}
+.cardstatus{border-color:#77c7bf;background:#effbf9;color:#148681;font-size:9px}
+.value{color:#123f7e;font-size:37px}
+.value-date{color:#8094ad}
+.change{color:#169469}.change.down{color:#c36a50}.change .tiny{color:#8192a8}
+.accordion{background:#f7f9fc;border-color:#d9e3ed;color:#173f75;border-radius:8px}
+.accordion:hover{background:#edf3fa}
+.card-expand{border-color:#d9e3ed}
+.footer{color:#8392a6;border-color:#e0e8ef}
+.overlay{background:#08244880}
+.modal{border-radius:15px}
+.modalhead{background:linear-gradient(105deg,#f0f5fa,#fff);border-bottom-color:#dbe5ef}
+.modal-kicker,.panelheading,.policy strong{color:#143f74}
+.modal-sub{color:#69809a}
+.xbtn{color:#123e72;border-color:#d8e4ed}
+.stat,.panel,.policy{border-color:#d7e3ef}
+.stat{border-top-color:#bd923d}.stat label,.stat small{color:#6a809b}.stat b{color:#143e72}
+.panelheading{color:#173e70}
+.datatable th{color:#536d8d}.datatable td:last-child{color:#174e88}
+.policy{color:#40607e}.source{color:#527093}
+.modbuttons button{border-color:#d8e2ec;color:#173f72}.modbuttons button.primary{background:#123e73;border-color:#123e73}
+
+
+/* Responsive SVG: scale chart with card width instead of imposing fixed max-height. */
+.viz{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;min-height:0;flex:0 0 auto;margin-top:auto;padding-top:18px}
+.viz svg{display:block;width:100%;max-width:none;height:auto;max-height:none;flex:0 0 auto;overflow:visible}
+#largechart{width:100%;min-width:0}
+#largechart svg{display:block;width:100%;max-width:none;height:auto;max-height:none}
+@media(max-width:800px){.viz{padding-top:12px}}
+.status-viz{width:100%;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;color:#173f74;text-align:center}
+.status-viz strong{font-size:17px}.status-viz small{font-size:11px;color:#8392a6}
+.status-symbol{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font-size:44px;font-weight:700}
+.status-symbol.complete{background:#e5f6ef;color:#198d72;border:6px solid #34b896}
+.status-symbol.pending{background:#f7f2e7;color:#b58c39;border:6px solid #d7b36b}
+
+
+/* Target-year semantics, preserve the provided NESDC/PDPC card layout */
+.card{min-height:492px;padding:18px 18px 15px}
+.card-header{min-height:0;line-height:1.5;font-size:13px;-webkit-line-clamp:2}
+.card-subtitle{font-size:11px;color:#5f7894;line-height:1.45;min-height:32px;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.meta-line{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:9px}
+.meta-line .cardstatus{margin-left:0}.phase{font-size:10px;color:#8795a4;margin-left:auto}
+.data-kind{padding:2px 7px;border-radius:14px;font-size:9px;font-weight:700;white-space:nowrap}
+.data-kind.comparable{background:#e9f5fb;color:#236e9f}.data-kind.single{background:#f7f0e4;color:#a77b33}
+.cardmeta{margin-top:8px}.card-value-row{margin-top:3px;min-height:61px}.value{font-size:30px}.value-date{font-size:10px}
+.caution{font-size:10px;color:#a37a36;min-height:16px;margin-top:3px}.blankcaution{visibility:hidden}
+.legend{display:flex;justify-content:center;gap:14px;color:#698198;font-size:9px;margin:5px 0 0;min-height:15px}
+.legend>span{display:flex;align-items:center;gap:4px}.legend i{display:inline-block;width:15px;height:7px;border-radius:2px}.leg-actual{background:#277fc6}.legend .leg-target{height:0;border-top:2px dashed #c39b46;border-radius:0}
+.viz{margin-top:auto;padding-top:7px}.viz svg{max-height:240px}.no-viz{min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#7c8fa8;font-size:13px}.no-viz small{margin-top:7px;font-size:10px}
+.card-expand table td,.card-expand table th{font-size:10px}.card-expand table td:not(:first-child),.card-expand table th:not(:first-child){text-align:right}
+.card-expand .selectedyear{background:#f3f7fb}.mini-note{font-size:10px;color:#687d97;line-height:1.5;margin-top:8px}
+.panels{grid-template-columns:1.55fr 1fr}.datatable{height:auto;max-height:340px}.datatable td:last-child{text-align:right}.datatable th,.datatable td{font-size:11px}.modal{width:min(1100px,97vw)}.panels svg{height:auto;max-height:360px}
+@media(max-width:1300px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.cards{grid-template-columns:1fr}.panels{grid-template-columns:1fr}.viz svg{max-height:none}.card{min-height:470px}}
+
+
+.reviewbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 20px;padding:14px 17px;border:1px solid #dae5ed;background:#fff;border-radius:11px}.reviewbar strong{display:block;color:#143d6e;font-size:13px}.reviewbar span{display:block;color:#637b94;font-size:11px;margin-top:3px}.reviewcount{font-size:17px;font-weight:800;color:#174979;text-align:right;white-space:nowrap}.reviewcount span{font-size:10px;font-weight:400}
+.data-kind.trend{background:#e8f4fc;color:#236c9d}.data-kind.review{background:#fff4de;color:#986b18}.data-kind.changed{background:#f9e9eb;color:#a54c55}.data-kind.single{background:#eff2f6;color:#64758b}.data-kind.missing{background:#f0f0f0;color:#7d8693}
+@media(max-width:800px){.reviewbar{align-items:start;flex-direction:column}.reviewcount{text-align:left}}
+
+
+/* Evidence-first chart update: 1-year series is never shown as a lone bar */
+.single-gauge{width:100%;height:auto;max-height:none}
+.evidence-box{width:100%;height:220px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;border:1px solid #e0e8f1;background:linear-gradient(135deg,#f8fbff 0%,#ffffff 100%);border-radius:12px;padding:17px 19px;text-align:left}
+.evidence-kicker{font-weight:800;font-size:11px;color:#124678;display:flex;align-items:center;gap:7px;margin-bottom:9px}
+.evidence-dot{width:8px;height:8px;background:#bb913b;border-radius:50%;flex:0 0 auto}
+.evidence-content{font-size:11px;line-height:1.7;color:#3b5875;overflow:auto;max-height:132px;white-space:normal;scrollbar-width:thin}
+.evidence-source{font-size:9px;color:#8596a8;padding-top:8px;margin-top:9px;border-top:1px solid #e4ebf2}
+.evidence-box.large{height:auto;min-height:280px;justify-content:flex-start;padding:25px}.evidence-box.large .evidence-content{max-height:235px;font-size:13px}
+.single-kpi{width:100%;height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,#fff,#f7fafd);border-radius:12px}
+.single-kpi-label{font-size:12px;color:#68809c}.single-kpi-value{font-size:42px;font-weight:800;color:#154577}.single-kpi-value small{font-size:14px}
+.single-kpi-rule{height:4px;width:80px;border-radius:5px;background:#27aa93}.single-kpi-note{font-size:10px;color:#7289a0;text-align:center;padding:0 16px}
+.card-value-row .value.qual-value{font-size:19px;letter-spacing:0;color:#47647f}
+.viz{min-height:225px}.viz .evidence-box{max-width:100%}
+@media(max-width:800px){.evidence-box{height:230px}}
+
+
+/* Full target year 2569 on every indicator, with safe text layout */
+.target-panel{margin-top:12px;padding:11px 12px;background:#f9fbfd;border:1px solid #e1e8f0;border-left:3px solid #bd923d;border-radius:7px;min-height:94px;display:flex;flex-direction:column;gap:6px}
+.target-panel-kicker{font-size:11px;color:#a1762b;font-weight:800;display:flex;justify-content:space-between;gap:8px}
+.target-panel-kicker span{color:#7890a8;font-weight:400;font-size:9px}
+.target-panel-body{font-size:10.5px;color:#365a79;line-height:1.65;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;overflow-wrap:anywhere}
+.target-modal-box{border:1px solid #e3e7ed;background:#f9fbfd;padding:16px 19px;border-left:4px solid #bd923d;border-radius:10px;margin-top:14px}
+.target-modal-head{font-size:13px;font-weight:800;color:#153c6d;margin-bottom:9px}
+.target-modal-text{font-size:12px;line-height:1.85;color:#3c5973;white-space:pre-wrap;overflow-wrap:anywhere}
+.card{min-height:530px}.card-value-row{margin-top:12px}.cardmeta{margin-top:8px}.viz{min-height:200px}
+@media(max-width:800px){.target-panel{min-height:85px}.card{min-height:500px}}
+
+
+/* Timeline of plan phases: minimal circles and connecting line; no extra captions. */
+.phase-track{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:10px 10px 13px;min-height:46px;flex:none;align-items:start}
+.phase-track::before{content:"";position:absolute;top:8px;left:16.66%;right:16.66%;border-top:2px solid #cfd8e3;z-index:0}
+.phase-node{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.phase-dot{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;border:2px solid #9faaba;background:#fff;color:#9faaba;font-size:14px;font-weight:800;line-height:1}
+.phase-dot.pass{border-color:#26a67f;background:#26a67f;color:#fff}
+.phase-dot.fail{border-color:#df6468;background:#df6468;color:#fff}
+.phase-dot.unknown{border-color:#9faaba;background:#9faaba;color:#9faaba}
+.phase-label{font-size:11px;line-height:1.4;color:#506983;font-weight:700;white-space:nowrap}
+.phase-track .phase-node:nth-child(2)::before{content:"";position:absolute;top:8px;right:50%;width:100%;border-top:2px solid #b9c9d7;z-index:-1;transform:translateY(-1px)}
+@media(max-width:700px){.phase-track{margin:9px 6px 12px}.phase-label{font-size:10px}}
+
+
+/* Header layout matches the supplied reference: two simple labeled lines. */
+.kpi-heading{display:flex;flex-direction:column;gap:6px;min-height:112px;padding:3px 0 10px;border-bottom:1px solid #edf1f6}
+.kpi-heading-row{display:flex;align-items:flex-start;gap:7px;font-size:12px;line-height:1.65;min-width:0}
+.kpi-heading-label{flex:0 0 65px;font-weight:800;white-space:nowrap}
+.kpi-heading-label.target-label{color:#c78616}
+.kpi-heading-label.indicator-label{color:#009ead}
+.kpi-heading-text{color:#55728f;flex:1;min-width:0;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.kpi-heading-row:nth-child(2) .kpi-heading-text{-webkit-line-clamp:4}
+.card{min-height:485px}
+.card .meta-line{margin-top:9px}
+.card .card-value-row{margin-top:12px}
+@media(max-width:800px){.kpi-heading{min-height:0}.card{min-height:470px}}
+
+
+/* Exact source transcription: allow the official Word wording to wrap. */
+.kpi-heading-row:nth-child(2) .kpi-heading-text{-webkit-line-clamp:4}
+.kpi-heading{min-height:118px}
+.kpi-heading-label{flex:0 0 67px}
+
+
+/* API-connected edition: original three-column visual system preserved */
+.reviewbar,.phase-track,.data-kind{display:none!important}
+.api-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:19px}
+.api-status{font-size:11px;font-weight:600;color:#55718c;line-height:1.6}
+.api-status.success{color:#137b66}.api-status.error{color:#af4f44}.api-status.loading{color:#5975a5}
+.api-refresh{border:1px solid #cbd9e7;background:#fff;color:#154979;padding:7px 12px;border-radius:8px;white-space:nowrap;font-weight:800}
+.api-card{min-height:480px}.api-section-head{display:flex;justify-content:space-between;gap:8px;color:#123e75;font-weight:800;font-size:12px;margin-top:16px}
+.api-section-head span{font-size:10px;color:#7490a5;font-weight:500}
+.api-record-info{padding:6px 0 8px;font-size:11px;color:#7188a0}
+.api-result-box{border:1px solid #dce6f0;border-radius:10px;background:linear-gradient(145deg,#f8fbfe,#fff);padding:15px;min-height:207px;max-height:240px;overflow:auto}
+.api-result-box .evidence-kicker{margin-bottom:10px}
+.api-text{white-space:pre-wrap;word-break:break-word;font-size:11px;color:#3e5976;line-height:1.8}
+.api-no-data{display:flex;min-height:160px;align-items:center;justify-content:center;flex-direction:column;text-align:center;color:#74869e;font-size:13px;line-height:1.7}
+.api-no-data small{font-size:10px;color:#91a0ae}
+.api-card-foot{margin-top:auto;padding-top:13px;font-size:10px;color:#7890a4}
+.api-card-foot .api-open{margin-top:8px}
+.api-modal-years{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:15px}
+.api-modal-years button{background:#fff;border:1px solid #ccd9e6;color:#234b76;border-radius:7px;padding:8px 15px;font-weight:700}
+.api-modal-years button.selected{background:#143d75;color:#fff}
+.api-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.api-detail-block{padding:16px;border:1px solid #d7e3ef;border-radius:10px;min-height:210px}
+.api-detail-block h3{margin:0 0 10px;color:#1a4d7e;font-size:14px}
+.api-detail-block p{white-space:pre-wrap;word-break:break-word;line-height:1.9;color:#3c5671;font-size:12px;margin:0}
+.api-detail-period{color:#6c819b;margin-bottom:13px}
+.api-history{margin-top:16px;border:1px solid #d7e3ef;border-radius:9px;padding:12px}
+.api-history table{border-collapse:collapse;width:100%}.api-history th,.api-history td{text-align:left;vertical-align:top;border-bottom:1px solid #e7edf4;padding:10px;font-size:11px;line-height:1.6}.api-history th{color:#154879}
+@media(max-width:800px){.api-detail-grid{grid-template-columns:1fr}.api-top{align-items:flex-start}.api-card{min-height:400px}}
+</style></head><body>
+<div class="layout"><aside class="sidebar" id="sidebar">
+ <div class="sidehead">แผนแม่บทการส่งเสริมและ<br>คุ้มครองข้อมูลส่วนบุคคล<br>พ.ศ. 2567–2570</div>
+ <nav class="sidenav" id="nav"></nav>
+ <div class="sidefoot">สำนักงานคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล</div>
+</aside><main class="main">
+<header class="topbar"><button class="iconbtn" onclick="toggleNav()" title="เมนู">≡</button><button class="iconbtn" onclick="setStrategy(1)" title="หน้าแรก">⌂</button>
+<div class="top-info"><div class="title-row"><h1 class="headline" id="heading">ยุทธศาสตร์ที่ 1</h1><button class="docs" onclick="showAbout()" title="เกี่ยวกับระบบ">▤</button></div><div class="subtitle" id="subtitle"></div></div>
+<div class="top-actions"><input id="search" placeholder="ค้นหาตัวชี้วัด" aria-label="ค้นหาตัวชี้วัด"><select id="year" aria-label="ปีงบประมาณ"><option>2569</option><option>2568</option><option>2567</option></select></div>
+</header>
+<div class="body">
+<div class="api-top"><span class="api-status loading" id="apiStatus" role="status">กำลังเชื่อมต่อ PDPC API…</span><button id="refresh" class="api-refresh" type="button">↻ โหลดข้อมูลใหม่</button></div>
+<div class="cards" id="cards"></div>
+</div><footer class="footer">ข้อมูลเชื่อมโยงผ่าน PDPC API · ปี 2569 แสดงข้อมูลไตรมาส 1–2 · ข้อมูลที่ไม่ปรากฏจะไม่แทนด้วยค่า 0</footer>
+</main></div>
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()"><section class="modal" role="dialog" aria-modal="true" aria-label="รายละเอียดตัวชี้วัด">
+<header class="modalhead"><div class="modal-kicker" id="mkicker"></div><div class="modal-title" id="mtitle"></div><div class="modal-sub" id="msub"></div><button class="xbtn" onclick="closeModal()" aria-label="ปิด">×</button></header>
+<div class="modbody"><div class="api-modal-years" id="modalYears"></div><div class="api-detail-period" id="mPeriod"></div>
+<div class="api-detail-grid"><div class="api-detail-block"><h3>เป้าหมายปี <span id="mTargetYear"></span></h3><p id="mTargetFull"></p></div><div class="api-detail-block"><h3>ผลการดำเนินงาน</h3><p id="mResultFull"></p></div></div>
+<div class="api-history"><div class="panelheading">ข้อมูลตามปีงบประมาณ</div><table><thead><tr><th>ปี</th><th>เป้าหมาย</th><th>ผลการดำเนินงาน</th></tr></thead><tbody id="mtable"></tbody></table></div>
+</div><footer class="modfoot"><span class="source">ข้อมูลจาก PDPC API</span><div class="modbuttons"><button onclick="copyLink()">คัดลอกลิงก์</button><button class="primary" onclick="closeModal()">ปิด</button></div></footer></section></div>
+<script>(function dashboardApp(){
+"use strict";
+const API_URL="https://pdpcapiurl.time-deplanreview.workers.dev/api/pdpc";
+const YEARS=["2567","2568","2569"];
+const STRATEGIES=[
+"การเพิ่มประสิทธิภาพการบังคับใช้กฎหมาย",
+"การพัฒนากำลังคนและสร้างความเชื่อมั่น",
+"การส่งเสริมเศรษฐกิจและสังคมดิจิทัล",
+"การสนับสนุนระบบนิเวศวิจัยและส่งเสริมการใช้เทคโนโลยี"
+];
+let records=[],groups=new Map(),active=1,selectedId=null,isLoaded=false;
+const $=id=>document.getElementById(id);
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function preview(v,max=175){let s=String(v??"").replace(/\s+/g," ").trim();return s.length>max?s.slice(0,max)+"…":s;}
+function parsedId(id){const m=String(id).match(/^s([1-4])_i(\d+)$/);return m?{strategy:Number(m[1]),order:Number(m[2])}:null;}
+function period(year){return year==="2569"?"ไตรมาส 1–2":"เต็มปี";}
+function byYear(group,year){return group?.years?.get(year)||null;}
+function setStatus(message,tone="neutral"){$("apiStatus").textContent=message;$("apiStatus").className="api-status "+tone;}
+async function loadApi(){
+ setStatus("กำลังเชื่อมต่อ PDPC API…","loading");
+ $("refresh").disabled=true;
+ try{
+   const response=await fetch(API_URL,{cache:"no-store",headers:{"Accept":"application/json"}});
+   if(!response.ok)throw new Error("HTTP "+response.status);
+   const payload=await response.json();
+   if(payload.success!==true||!Array.isArray(payload.data))throw new Error("รูปแบบ JSON ไม่ตรงตามที่กำหนด");
+   const next=new Map(),valid=[];
+   for(const item of payload.data){
+     if(!item||!parsedId(item.indicatorId)||!YEARS.includes(String(item.fiscalYear)))continue;
+     const id=String(item.indicatorId),year=String(item.fiscalYear),parsed=parsedId(id);
+     if(!next.has(id))next.set(id,{id,strategy:parsed.strategy,order:parsed.order,name:String(item.indicatorName||id),years:new Map()});
+     const g=next.get(id);
+     if(g.years.has(year)){console.warn("Multiple records for same indicator/year; latest received record shown",id,year);}
+     g.years.set(year,{recordId:String(item.recordId||""),year,reportingPeriod:String(item.reportingPeriod||period(year)),targetText:String(item.targetText||""),resultText:String(item.resultText||"")});
+     valid.push(item);
+   }
+   if(!valid.length)throw new Error("ไม่พบระเบียนที่ใช้ได้");
+   records=valid;groups=next;isLoaded=true;
+   setStatus("เชื่อมต่อข้อมูลสำเร็จ · "+groups.size+" ตัวชี้วัด · "+records.length+" รายการรายปี","success");
+   render();
+   const modalId=new URLSearchParams(location.search).get("indicator");
+   if(modalId&&groups.has(modalId))openModal(modalId);
+ }catch(err){
+   setStatus("เชื่อมต่อ API ไม่สำเร็จ: "+err.message+" · โปรดตรวจสอบ CORS และ URL ของ Worker","error");
+   if(!isLoaded)$("cards").innerHTML='<div class="empty">ไม่สามารถเรียกข้อมูลจาก PDPC API ได้ กรุณาตรวจสอบการตั้งค่า CORS ของ Cloudflare Worker แล้วกด “โหลดใหม่”</div>';
+ }finally{$("refresh").disabled=false;}
+}
+function renderNav(){
+ $("nav").innerHTML=STRATEGIES.map((name,i)=>'<button class="navitem '+(active===i+1?"active":"")+'" data-strategy="'+(i+1)+'"><strong>ยุทธศาสตร์ที่ '+(i+1)+'</strong><small>'+esc(name)+'</small></button>').join("");
+ $("nav").querySelectorAll("[data-strategy]").forEach(b=>b.addEventListener("click",()=>setStrategy(Number(b.dataset.strategy))));
+}
+function render(){
+ $("heading").textContent="ยุทธศาสตร์ที่ "+active;
+ $("subtitle").textContent=STRATEGIES[active-1];
+ renderNav();
+ if(!isLoaded)return;
+ const year=$("year").value,q=$("search").value.trim().toLowerCase();
+ const items=[...groups.values()].filter(g=>g.strategy===active&&(!q||(g.name+" "+g.id).toLowerCase().includes(q))).sort((a,b)=>a.order-b.order);
+ $("cards").innerHTML=items.map(g=>{
+  const row=byYear(g,year),available=!!row,txt=row?row.resultText:"";
+  return '<article class="card api-card">'+
+   '<div class="kpi-heading">'+
+   '<div class="kpi-heading-row"><span class="kpi-heading-label target-label">เป้าหมาย:</span><span class="kpi-heading-text" title="'+esc(row?.targetText||"ไม่มีข้อมูลในปีที่เลือก")+'">'+esc(preview(row?.targetText||"ไม่มีข้อมูลในรายงานสำหรับปีที่เลือก"))+'</span></div>'+
+   '<div class="kpi-heading-row"><span class="kpi-heading-label indicator-label">ตัวชี้วัด:</span><span class="kpi-heading-text">'+esc(g.name)+'</span></div></div>'+
+   '<div class="api-section-head">ข้อมูลที่แสดงผล <span>ปี '+esc(year)+(year==="2569"?" (Q1–Q2)":"")+'</span></div>'+
+   '<div class="api-record-info">'+(available?esc(row.reportingPeriod):"ไม่มีข้อมูลในรายงานสำหรับปีที่เลือก")+'</div>'+
+   '<div class="api-result-box">'+(available?'<div class="evidence-kicker"><span class="evidence-dot"></span> ผลการดำเนินงาน</div><div class="api-text">'+esc(txt||"ไม่มีข้อความผลการดำเนินงาน")+'</div>':'<div class="api-no-data">ไม่มีข้อมูลในรายงานสำหรับปีที่เลือก<br><small>ไม่ใช้ค่า 0 แทนข้อมูลที่ไม่มี</small></div>')+'</div>'+
+   '<div class="api-card-foot"><span>ตัวชี้วัด '+esc(g.id)+'</span><button type="button" class="accordion api-open" data-open="'+esc(g.id)+'"><span>ดูรายละเอียดและข้อมูลรายปี</span><span>↗</span></button></div></article>';
+ }).join("")||'<div class="empty">ไม่พบตัวชี้วัดตามคำค้นหา</div>';
+ $("cards").querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>openModal(b.dataset.open)));
+}
+function setStrategy(n){active=n;$("search").value="";$("sidebar").classList.remove("open");safeUrl("?strategy="+n);render();window.scrollTo({top:0,behavior:"smooth"});}
+function safeUrl(query){try{history.replaceState(null,"",query);}catch(e){}}
+function toggleNav(){$("sidebar").classList.toggle("open");}
+function openModal(id){
+ const g=groups.get(id);if(!g)return;
+ selectedId=id;
+ $("mkicker").textContent="ยุทธศาสตร์ที่ "+g.strategy+" · ตัวชี้วัด "+id;
+ $("mtitle").textContent=g.name;
+ $("msub").textContent="ข้อมูลที่ส่งมาจาก PDPC API ตามปีงบประมาณ";
+ const selected=$("year").value;
+ $("modalYears").innerHTML=YEARS.map(y=>'<button class="'+(y===selected?"selected":"")+'" type="button" data-modal-year="'+y+'">'+y+'</button>').join("");
+ $("modalYears").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>renderModalYear(g,b.dataset.modalYear)));
+ renderModalYear(g,selected);
+ $("overlay").classList.add("active");document.body.style.overflow="hidden";
+ safeUrl("?strategy="+active+"&indicator="+encodeURIComponent(id));
+}
+function renderModalYear(g,year){
+ $("modalYears").querySelectorAll("button").forEach(b=>b.classList.toggle("selected",b.dataset.modalYear===year));
+ const data=byYear(g,year),fallback="ไม่มีข้อมูลในรายงานสำหรับปีที่เลือก";
+ $("mTargetYear").textContent=year;
+ $("mPeriod").textContent=data?data.reportingPeriod:fallback;
+ $("mTargetFull").textContent=data?(data.targetText||fallback):fallback;
+ $("mResultFull").textContent=data?(data.resultText||fallback):fallback;
+ $("mtable").innerHTML=YEARS.map(y=>{
+ const r=byYear(g,y);
+ return '<tr><td>'+y+'</td><td>'+esc(r?preview(r.targetText,85):fallback)+'</td><td>'+esc(r?preview(r.resultText,85):fallback)+'</td></tr>';
+ }).join("");
+}
+function closeModal(){$("overlay").classList.remove("active");document.body.style.overflow="";selectedId=null;safeUrl("?strategy="+active);}
+function copyLink(){if(navigator.clipboard?.writeText)navigator.clipboard.writeText(location.href).catch(()=>prompt("คัดลอก URL",location.href));else prompt("คัดลอก URL",location.href);}
+function showAbout(){alert("ระบบแสดงข้อมูลจาก PDPC API โดยตรง\nข้อมูลตัวเลขไม่ได้รับการตีความเป็นกราฟอัตโนมัติ เพราะในแต่ละผลการดำเนินงานอาจมีหลายตัวชี้วัดและหลายหน่วยนับ");}
+window.toggleNav=toggleNav;window.setStrategy=setStrategy;window.closeModal=closeModal;window.copyLink=copyLink;window.showAbout=showAbout;window.render=render;
+$("refresh").addEventListener("click",loadApi);
+$("search").addEventListener("input",render);
+$("year").addEventListener("change",render);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+const params=new URLSearchParams(location.search);
+active=Math.max(1,Math.min(4,parseInt(params.get("strategy")||"1",10)||1));
+renderNav();
+loadApi();
+})();</script></body></html>
