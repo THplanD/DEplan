@@ -5,6 +5,10 @@
 
 
 
+
+
+
+
 /* PDPC identity treatment — retains NESDC dashboard layout */
 :root{--deep:#0d315e;--main:#12477e;--blue:#246cba;--gold:#bd923d;--aqua:#2aa9ae;--bg:#f6f8fc;--line:#dce5ef;--text:#173c6b;--small:#5b7191;--positive:#159365;--orange:#c48b2b}
 html,body{background:#f6f8fc;color:#173c6b}
@@ -53,6 +57,10 @@ html,body{background:#f6f8fc;color:#173c6b}
 
 
 
+
+
+
+
 /* Responsive SVG: scale chart with card width instead of imposing fixed max-height. */
 .viz{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;min-height:0;flex:0 0 auto;margin-top:auto;padding-top:18px}
 .viz svg{display:block;width:100%;max-width:none;height:auto;max-height:none;flex:0 0 auto;overflow:visible}
@@ -64,6 +72,10 @@ html,body{background:#f6f8fc;color:#173c6b}
 .status-symbol{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font-size:44px;font-weight:700}
 .status-symbol.complete{background:#e5f6ef;color:#198d72;border:6px solid #34b896}
 .status-symbol.pending{background:#f7f2e7;color:#b58c39;border:6px solid #d7b36b}
+
+
+
+
 
 
 
@@ -90,9 +102,17 @@ html,body{background:#f6f8fc;color:#173c6b}
 
 
 
+
+
+
+
 .reviewbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 20px;padding:14px 17px;border:1px solid #dae5ed;background:#fff;border-radius:11px}.reviewbar strong{display:block;color:#143d6e;font-size:13px}.reviewbar span{display:block;color:#637b94;font-size:11px;margin-top:3px}.reviewcount{font-size:17px;font-weight:800;color:#174979;text-align:right;white-space:nowrap}.reviewcount span{font-size:10px;font-weight:400}
 .data-kind.trend{background:#e8f4fc;color:#236c9d}.data-kind.review{background:#fff4de;color:#986b18}.data-kind.changed{background:#f9e9eb;color:#a54c55}.data-kind.single{background:#eff2f6;color:#64758b}.data-kind.missing{background:#f0f0f0;color:#7d8693}
 @media(max-width:800px){.reviewbar{align-items:start;flex-direction:column}.reviewcount{text-align:left}}
+
+
+
+
 
 
 
@@ -115,6 +135,10 @@ html,body{background:#f6f8fc;color:#173c6b}
 
 
 
+
+
+
+
 /* Full target year 2569 on every indicator, with safe text layout */
 .target-panel{margin-top:12px;padding:11px 12px;background:#f9fbfd;border:1px solid #e1e8f0;border-left:3px solid #bd923d;border-radius:7px;min-height:94px;display:flex;flex-direction:column;gap:6px}
 .target-panel-kicker{font-size:11px;color:#a1762b;font-weight:800;display:flex;justify-content:space-between;gap:8px}
@@ -125,6 +149,10 @@ html,body{background:#f6f8fc;color:#173c6b}
 .target-modal-text{font-size:12px;line-height:1.85;color:#3c5973;white-space:pre-wrap;overflow-wrap:anywhere}
 .card{min-height:530px}.card-value-row{margin-top:12px}.cardmeta{margin-top:8px}.viz{min-height:200px}
 @media(max-width:800px){.target-panel{min-height:85px}.card{min-height:500px}}
+
+
+
+
 
 
 
@@ -140,6 +168,10 @@ html,body{background:#f6f8fc;color:#173c6b}
 .phase-label{font-size:11px;line-height:1.4;color:#506983;font-weight:700;white-space:nowrap}
 .phase-track .phase-node:nth-child(2)::before{content:"";position:absolute;top:8px;right:50%;width:100%;border-top:2px solid #b9c9d7;z-index:-1;transform:translateY(-1px)}
 @media(max-width:700px){.phase-track{margin:9px 6px 12px}.phase-label{font-size:10px}}
+
+
+
+
 
 
 
@@ -160,10 +192,18 @@ html,body{background:#f6f8fc;color:#173c6b}
 
 
 
+
+
+
+
 /* Exact source transcription: allow the official Word wording to wrap. */
 .kpi-heading-row:nth-child(2) .kpi-heading-text{-webkit-line-clamp:4}
 .kpi-heading{min-height:118px}
 .kpi-heading-label{flex:0 0 67px}
+
+
+
+
 
 
 
@@ -199,7 +239,15 @@ html,body{background:#f6f8fc;color:#173c6b}
 
 
 
+
+
+
+
 .api-status.success{display:none!important}
+
+
+
+
 
 
 
@@ -212,11 +260,19 @@ html,body{background:#f6f8fc;color:#173c6b}
 
 
 
+
+
+
+
 /* Sidebar navigation back to the main policy dashboard */
 .sidebar-return{padding:12px 10px 10px;border-top:1px solid #e3e8f0}
 .sidebar-return .back-to-main{display:flex;width:100%;justify-content:flex-start;align-items:center;margin:0;padding:10px 12px;background:#edf3fa;border:1px solid #d9e5f0;color:#163f70;font-size:12px;font-weight:700;border-radius:8px;text-decoration:none}
 .sidebar-return .back-to-main:hover{background:#e2edf8;border-color:#b9cde1}
 .sidebar-return .back-to-main:focus-visible{outline:2px solid #459ddb;outline-offset:2px}
+
+
+
+
 
 
 
@@ -252,6 +308,10 @@ html,body{background:#f6f8fc;color:#173c6b}
 .viz-metric-card th:first-child,.viz-metric-card td:first-child{text-align:left}
 @media(max-width:1200px){.viz-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.viz-stat-grid,.viz-card-grid{grid-template-columns:1fr}.viz-intro{align-items:flex-start;flex-direction:column}.view-tab{padding:10px;font-size:11px}}
+
+
+
+
 
 
 
@@ -292,9 +352,17 @@ html,body{background:#f6f8fc;color:#173c6b}
 
 
 
+
+
+
+
 .viz-kpi-only{min-height:190px;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:linear-gradient(180deg,#fff,#f5f9fc);border:1px solid #e3eaf1;border-radius:10px;text-align:center}
 .viz-kpi-only>div{font-size:38px;line-height:1.2;font-weight:800;color:#174b83}
 .viz-kpi-only small{font-size:13px}.viz-kpi-only span{color:#687f99;font-size:10px;line-height:1.5}
+
+
+
+
 
 
 
@@ -316,11 +384,23 @@ html,body{background:#f6f8fc;color:#173c6b}
 
 
 
+
+
+
+
+
+
+
+
 #vizPanel .support-card{min-height:320px}
 #vizPanel .support-card .viz-graphic{min-height:160px;flex:1}
 .support-pair{width:100%;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .support-pair>div{background:#f2f7fb;border:1px solid #dce6ef;border-radius:10px;text-align:center;padding:22px 8px}
 .support-pair strong{display:block;color:#153f73;font-size:29px}.support-pair span{display:block;color:#68839e;font-size:11px}
+
+
+
+
 
 
 
@@ -336,6 +416,14 @@ html,body{background:#f6f8fc;color:#173c6b}
 #vizPanel .viz-card-footnote{font-size:10px;color:#617891;line-height:1.7;min-height:0}
 #vizPanel .gauge-graphic{max-height:230px}
 #vizPanel .donut-graphic{max-height:260px}
+
+
+/* Consistent target and indicator headings across all visualization cards. */
+#vizPanel .support-card-top{display:flex;flex-direction:column;gap:7px;height:auto;min-height:0;padding:2px 0 10px;margin:0 0 9px;border-bottom:1px solid #e8edf4;overflow:visible}
+#vizPanel .support-card-top .kpi-heading-row{display:flex;align-items:flex-start;gap:7px;min-width:0;font-size:12px;line-height:1.65}
+#vizPanel .support-card-top .kpi-heading-label{flex:0 0 67px;white-space:nowrap;font-weight:800}
+#vizPanel .support-card-top .kpi-heading-text{min-width:0;flex:1;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;overflow-wrap:anywhere;color:#5d7592}
+#vizPanel .support-card .viz-card-label{margin-top:0}
 </style><script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script></head><body>
 <div class="layout"><aside class="sidebar" id="sidebar">
  <div class="sidehead">แผนแม่บทการส่งเสริมและ<br>คุ้มครองข้อมูลส่วนบุคคล<br>พ.ศ. 2567–2570</div>
@@ -469,6 +557,10 @@ function showAbout(){alert("ระบบแสดงข้อมูลจาก 
 
 
 
+
+
+
+
 function exportExcel(){
  if(!isLoaded||!groups.size){alert("ยังไม่มีข้อมูลสำหรับส่งออก");return;}
  if(typeof XLSX==="undefined"){alert("โหลดเครื่องมือสร้าง Excel ไม่สำเร็จ กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ต");return;}
@@ -485,6 +577,10 @@ function exportExcel(){
  XLSX.utils.book_append_sheet(wb,ws,"PDPC Data");
  XLSX.writeFile(wb,"PDPC_Strategy_"+active+"_"+year+".xlsx");
 }
+
+
+
+
 
 
 
@@ -539,6 +635,10 @@ function evidenceGraphic(row){
  const result=String(row?.resultText||"").trim();
  return '<div class="viz-evidence"><span class="viz-evidence-title">ผลการดำเนินงาน</span><div>'+esc(result?preview(result,450):"ยังไม่มีผลการดำเนินงานในปีที่เลือก")+'</div></div>';
 }
+
+
+
+
 
 
 
@@ -648,6 +748,14 @@ function renderViz(){
 
 
 
+
+
+
+
+
+
+
+
 const SUPPORT_DATA=[["channels","s1_i5","2568","ช่องทางให้บริการ PDPA Center","ราย","donut",[["Walk-in","Walk in ","ราย"],["LINE Official","Line official ","ราย"],["โทรศัพท์","โทรศัพท์ ","ราย"],["ศูนย์เชียงใหม่","จังหวัดเชียงใหม่ ","ราย"]],"ผู้ใช้บริการ 15,183 ราย จำแนกตามช่องทาง"],["help","s1_i5","2569","ประเภทบริการ PDPA Center","ราย","donut",[["คำปรึกษา","การให้คำปรึกษา รวมทั้งสิ้นจำนวน ","ราย"],["ร้องเรียน","การรับเรื่องร้องเรียนผ่านช่องทางต่างๆ รวมทั้งสิ้นจำนวน ","ราย"]],"คำปรึกษาและเรื่องร้องเรียนรวม 6,779 ราย (Q1–Q2)"],["complaints","s1_i5","2568","ช่องทางรับเรื่องร้องเรียน","ราย","donut",[["ระบบรับเรื่องร้องเรียน","ระบบรับเรื่องร้องเรียน ","ราย"],["ยื่นด้วยตนเอง","ยื่นโดยตรงด้วยตนเอง ","ราย"],["E-mail","ยื่นผ่าน E-mail ","ราย"],["ไปรษณีย์ / หนังสือ","ยื่นผ่านไปรษณีย์/หนังสือ ","ราย"]],"เรื่องร้องเรียน 1,354 ราย จำแนกช่องทาง"],["dpo","s1_i1","2569","เครือข่าย DPO สะสม","หน่วยงาน","line",[["ปี 2568","เครือข่าย DPO สะสม ปี 68 จำนวน ","หน่วยงาน"],["ปี 2569","เครือข่ายสะสม จำนวน ","หน่วยงาน"]],"แสดงยอดสะสมสองปี ไม่ใช่จำนวนเพิ่มขึ้นรายปี"],["pmm","s1_i6","2569","การประเมิน Privacy Maturity Model","แห่ง","bar",[["ภาครัฐ ระดับ 5","ระดับ 5 ของ Privacy Maturity Model จำนวน ","แห่ง"],["SET100 ระดับ 5","ได้ระดับ 5 จำนวน ","แห่ง"],["SMEs ระดับ 3","SMEs ได้ระดับ 3 จำนวน ","แห่ง"]],"ระดับการประเมินและฐานประชากรต่างกันแต่ละกลุ่ม"],["trustmark","s1_i9","2568","หน่วยงานยื่นขอรับรอง Trustmark","หน่วยงาน","gauge",[["ผลจริง","(Trustmark) จำนวน ","หน่วยงาน"]],"จำนวนผู้ยื่นขอรับรอง ไม่ใช่จำนวนที่ได้รับรองแล้ว",["(ไม่น้อยกว่า ","หน่วยงาน"]],["training-test","s2_i1","2567","ผู้เข้าอบรมและผ่านทดสอบ","คน","bar",[["ผู้ได้รับการอบรม","คุ้มครองข้อมูลส่วนบุคคล จำนวน ","คน รวมทั้งผ่าน"],["ผู้ผ่านทดสอบ","ผ่านเกณฑ์ทดสอบความรู้ ","คน"]],"ผู้ผ่านทดสอบเป็นส่วนหนึ่งของผู้เข้ารับการอบรม"],["training-2568","s2_i1","2568","ผู้เข้าร่วมอบรมด้าน PDPA","ราย","single",[["ผู้เข้าร่วม","มีผู้เข้าร่วมอบรมสะสม จำนวน ","ราย"]],"จำนวนผู้เข้าร่วมอบรมสะสมตามรายงานปี 2568"],["training-2569","s2_i1","2569","กิจกรรมอบรมและบรรยาย ThaiPAC","ครั้ง","bar",[["อบรมหลักสูตร","ไตรมาสที่ 2 มีการจัดอบรมจำนวน ","ครั้ง"],["บรรยาย ThaiPAC","มีการบรรยายรวม ","ครั้ง"]],"กิจกรรมต่างรูปแบบ ไม่ควรบวกรวม"],["trainer-reach","s2_i5","2569","หน่วยงานที่เข้าร่วมถ่ายทอดความรู้","แห่ง","bar",[["ภาครัฐ","(ภาครัฐ ","แห่ง ภาคเอกชน 12"],["ภาคเอกชน","ภาคเอกชน ","แห่ง) (ข้อมูลณ"]],"ผลเฉพาะไตรมาส 2 ปี 2569 ไม่ใช่ยอดสะสม"],["press","s2_i9","2568","ผลการเผยแพร่ข่าวประชาสัมพันธ์","หน่วยต่างกัน","paired",[["ประเด็นข่าว","(Press Release) ของสคส. จำนวน ","ประเด็น"],["สื่อ","ประเด็น ","สื่อ"]],"จำนวนประเด็นและจำนวนสื่อเป็นคนละหน่วยนับ"],["mou","s3_i8","2569","MOU ความร่วมมือ","ฉบับ","donut",[["มีผลอยู่","Active MOU ","ฉบับ"],["สิ้นสุดสัญญา","สิ้นสุดสัญญา ","ฉบับ"]],"สถานะ MOU ทั้งหมด 22 ฉบับ"],["gppc-use","s4_i1","2568","หน่วยงานใช้บริการ GPPC","หน่วยงาน","gauge",[["ผลจริง","หน่วยงานใช้บริการ ","หน่วยงาน"]],"ผล 126 หน่วยงาน เทียบเป้าไม่น้อยกว่า 110 หน่วยงาน",["ไม่น้อยกว่า ","หน่วยงาน"]],["gppc-score","s4_i1","2568","ผลประเมินบริการ GPPC","%","percentage",[["ความเชื่อมั่น","ผลความเชื่อมั่นในการใช้บริการภายใต้โครงการ GPPC ได้ร้อยละ ","ผลสำรวจ"],["ความพึงพอใจ","ผลสำรวจความพึงพอใจของผู้ใช้บริการภายใต้ โครงการ GPPC ได้ร้อยละ ",""]],"สองประเด็นการประเมินต่างกัน ไม่ใช่คะแนนเดียว"],["p-index","s4_i8","2569","คะแนนเฉลี่ย Privacy Index","คะแนน","single",[["คะแนนเฉลี่ย","คะแนนเฉลี่ย Privacy Index อยู่ที่ ","คะแนน"]],"คะแนนเฉลี่ยจาก 180 หน่วยงาน ปี 2569 (Q1–Q2)"],["thipac","s2_i1","2569","จำนวนผู้ร่วมฟังบรรยาย ThaiPAC","คน","single",[["ผู้ร่วมฟัง","รวมประมาณ ","คน"]],"จำนวนประมาณจากกิจกรรมบรรยาย 163 ครั้ง"]];
 function supportNum(t,p,s){
  const tx=String(t||"").replace(/\s+/g," "),i=tx.indexOf(p);
@@ -692,9 +800,15 @@ function supportCard(info,yr){
  else if(kind==="single")vis='<div class="viz-kpi-only"><div>'+vizFmt(points[0].value)+' <small>'+esc(unit)+'</small></div></div>';
  else if(kind==="paired")vis='<div class="support-pair">'+points.map(x=>'<div><strong>'+vizFmt(x.value)+'</strong><span>'+esc(x.label)+'</span></div>').join("")+'</div>';
  else vis=supportBars(points);
+ const targetText=String(row.targetText||"").trim()||"ไม่ระบุเป้าหมายในข้อมูลปีนี้";
+ const indicatorText=String(g.name||"").trim()||id;
+ const top='<div class="viz-card-top support-card-top">'+
+   '<div class="kpi-heading-row"><span class="kpi-heading-label target-label">เป้าหมาย:</span><span class="kpi-heading-text" title="'+esc(targetText)+'">'+esc(preview(targetText,175))+'</span></div>'+
+   '<div class="kpi-heading-row"><span class="kpi-heading-label indicator-label">ตัวชี้วัด:</span><span class="kpi-heading-text" title="'+esc(indicatorText)+'">'+esc(preview(indicatorText,180))+'</span></div>'+
+   '</div>';
  const label='<div class="viz-card-label"><span>ข้อมูลสนับสนุน</span><strong>'+esc(title)+'</strong></div>';
  const time='<div class="viz-main-period" style="text-align:left">ข้อมูล ณ ปี '+year+(year==="2569"?" (Q1–Q2)":"")+'</div>';
- return '<article class="viz-full-card support-card">'+label+time+'<div class="viz-graphic">'+vis+'</div><div class="viz-card-footnote">'+esc(note)+'</div><button type="button" class="accordion" data-viz-open="'+esc(id)+'"><span>ดูรายละเอียดและข้อมูลรายปี</span><span>↗</span></button></article>';
+ return '<article class="viz-full-card support-card">'+top+label+time+'<div class="viz-graphic">'+vis+'</div><div class="viz-card-footnote">'+esc(note)+'</div><button type="button" class="accordion" data-viz-open="'+esc(id)+'"><span>ดูรายละเอียดและข้อมูลรายปี</span><span>↗</span></button></article>';
 }
 
 
@@ -704,7 +818,19 @@ function supportCard(info,yr){
 
 
 
+
+
+
+
+
+
+
+
 window.switchView=switchView;
+
+
+
+
 
 
 
