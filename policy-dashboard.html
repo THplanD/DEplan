@@ -614,6 +614,65 @@ body:has(#policyPlanPage.is-active) .topbar .policy-top-selector{display:flex}
 .app{grid-template-columns:218px minmax(0,1fr)!important}
 @media(max-width:800px){.app{grid-template-columns:68px minmax(0,1fr)!important}}
 </style>
+<style id="bde-mobile-responsive-fix">
+/* BDE MOBILE NAVIGATION — shared between the two dashboards */
+@media (max-width:800px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  #bdeUnifiedSidebar{position:relative!important;top:auto!important;display:block!important;width:100%!important;min-width:0!important;height:auto!important;min-height:0!important;overflow:visible!important;padding:10px 10px 8px!important;margin:0!important;border:0!important;box-shadow:none!important;z-index:25!important;background:linear-gradient(115deg,#115bb9,#073a87)!important}
+  #bdeUnifiedSidebar .bde-unified-brand{height:47px!important;min-height:47px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 8px 7px!important;margin:0!important}
+  #bdeUnifiedSidebar .bde-unified-brand img{display:block!important;width:auto!important;max-width:148px!important;height:39px!important;max-height:39px!important;object-fit:contain!important}
+  #bdeUnifiedSidebar nav.menu{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:4px!important;padding:0!important;margin:0!important;position:relative!important;overflow:visible!important}
+  #bdeUnifiedSidebar nav.menu a.bde-unified-link{min-width:0!important;width:100%!important;min-height:68px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:5px!important;padding:8px 2px!important;margin:0!important;text-align:center!important;border-radius:10px!important;font-size:10px!important;font-weight:600!important;line-height:1.2!important;box-shadow:none!important;white-space:normal!important}
+  #bdeUnifiedSidebar nav.menu a.bde-unified-link svg{width:22px!important;height:22px!important;min-width:22px!important;flex:0 0 22px!important}
+  #bdeUnifiedSidebar nav.menu a.bde-unified-link .label{display:block!important;white-space:normal!important;overflow-wrap:anywhere!important;line-height:1.2!important;font-size:9px!important;font-weight:650!important;color:inherit!important;max-width:100%!important}
+  #bdeUnifiedSidebar nav.menu a.bde-unified-link.active{background:#2674e8!important}
+}
+@media (max-width:370px){
+  #bdeUnifiedSidebar{padding:8px 5px!important}
+  #bdeUnifiedSidebar nav.menu{gap:2px!important}
+  #bdeUnifiedSidebar nav.menu a.bde-unified-link{padding:7px 1px!important;min-height:70px!important}
+  #bdeUnifiedSidebar nav.menu a.bde-unified-link .label{font-size:8px!important}
+}
+
+@media (max-width:800px){
+  .app{display:block!important;grid-template-columns:none!important;width:100%!important;min-width:0!important}
+  .app>.main{width:100%!important;min-width:0!important;overflow:visible!important}
+  .topbar{height:auto!important;min-height:0!important;position:relative!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;padding:15px 16px!important;gap:12px!important}
+  .top-title,.top-title h2,.top-title p{max-width:100%!important;overflow-wrap:break-word!important}
+  .top-title h2{font-size:17px!important;line-height:1.45!important}
+  .top-title p{font-size:12px!important;line-height:1.5!important}
+  .top-actions{width:100%!important;min-width:0!important;display:flex!important;justify-content:flex-start!important;gap:10px!important;flex-wrap:wrap!important}
+  .content{width:100%!important;max-width:100%!important;padding:12px!important;overflow:visible!important}
+  .hero{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:18px!important;min-height:0!important;height:auto!important;padding:20px 14px!important;overflow:hidden!important}
+  .hero-left,.hero-right{width:100%!important;min-width:0!important;max-width:100%!important;padding-top:0!important}
+  .welcome{font-size:17px!important;line-height:1.4!important}
+  .hero-title{font-size:clamp(21px,5.4vw,28px)!important;line-height:1.4!important;max-width:100%!important;overflow-wrap:break-word!important}
+  .hero-sub{font-size:13px!important;line-height:1.55!important;overflow-wrap:break-word!important}
+  .feature-strip{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;margin-top:25px!important;padding:14px 12px!important;max-width:100%!important;align-items:stretch!important;background:rgba(255,255,255,.8)!important}
+  .feature{display:flex!important;align-items:center!important;flex-direction:column!important;text-align:center!important;min-width:0!important;padding:8px 4px!important;gap:4px!important}
+  .feature-icon{width:52px!important;height:52px!important;margin:0 auto 7px!important;flex:0 0 52px!important}
+  .feature-icon img{width:31px!important;height:31px!important}
+  .feature b{font-size:11px!important;line-height:1.4!important;margin:0!important}
+  .feature span{font-size:10px!important;line-height:1.4!important}
+  .summary,.hero-right .summary{width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;justify-self:stretch!important}
+  .status{grid-template-columns:45px minmax(0,1fr) auto!important;gap:8px!important;padding:10px!important}
+  .status-ico{width:40px!important;height:40px!important}
+  .status-info{min-width:0!important}
+  .status-info small{white-space:normal!important}
+  .kpis,.cards,.project-wrap{max-width:100%!important;min-width:0!important}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .search-wrap,.search{max-width:100%!important}
+  .gi-page,.pm-page,.policy-page{max-width:100%!important;min-width:0!important}
+  .pm-charts,.pm-filter-grid{grid-template-columns:minmax(0,1fr)!important}
+  .dr-item{min-width:0!important}
+}
+@media(max-width:450px){
+  .feature-strip{gap:7px!important;padding:10px 8px!important}
+  .hero{padding:18px 12px!important}
+  .summary{padding:14px!important}
+  .kpis{grid-template-columns:minmax(0,1fr)!important}
+}
+</style>
 </head>
 <body>
 <div class="app">
